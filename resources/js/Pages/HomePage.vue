@@ -1,14 +1,16 @@
 <template>
-    <h1>Hi</h1>
+    <FrontLayout>
+        <h1>This is my front page!</h1>
+    </FrontLayout>
 </template>
 
 <script>
+import FrontLayout from '@/Layouts/FrontLayout.vue';
+
 export default {
-    props: {
-        message: {
-            type: String,
-            required: true
-        }
-    }
+  name: 'FrontPage',
+  components: {
+    FrontLayout
+  }
 }
 </script>

@@ -14,7 +14,14 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('HomePage', [
-        'message' => 'Look mum, I\'m doing Inertia!',
-    ]);
-});
+    return Inertia::render('HomePage');
+})->name('home');
+Route::get('/blogs', function () {
+    return Inertia::render('BlogPage');
+})->name('blog');
+Route::get('/about', function () {
+    return Inertia::render('BlogPage');
+})->name('about');
+Route::get('/contact', function () {
+    return Inertia::render('ContactPage');
+})->name('contact');

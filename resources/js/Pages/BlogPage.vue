@@ -1,6 +1,6 @@
 <template>
     <FrontLayout>
-        <h1>This is my Home page!</h1>
+        <h1>This is my blog page!</h1>
     </FrontLayout>
 </template>
 
@@ -8,7 +8,7 @@
 import FrontLayout from '@/Layouts/FrontLayout.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'BlogPage',
   components: {
     FrontLayout
   }

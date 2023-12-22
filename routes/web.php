@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +14,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('HomePage');
-})->name('home');
-Route::get('/blogs', function () {
-    return Inertia::render('BlogPage');
-})->name('blog');
-Route::get('/about', function () {
-    return Inertia::render('BlogPage');
-})->name('about');
-Route::get('/contact', function () {
-    return Inertia::render('ContactPage');
-})->name('contact');
+Route::get('/',[PageController::class,'index'])->name('home');
+Route::get('/blogs',[PageController::class,'blogs'])->name('blog');
+Route::get('/about', [PageController::class,'about'])->name('about');
+Route::get('/contact', [PageController::class,'contact'] )->name('contact');
